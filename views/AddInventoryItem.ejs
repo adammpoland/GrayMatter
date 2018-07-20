@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="/style.css">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  <title>GrayMatter</title>
+</head>
+<body>
+<div class="container opacity">
+  <form action="/AddInventoryItem/<%= player._id%>?_method=PUT" method="POST">
+
+           <input type="hidden" name="_method" value="PUT">
+           <div class="form-group">
+               <label for="Weapon1name">Name of Weapon One </label>
+               <input type="text" class="form-control" name="Weapon1name" value="<%= player.Weapon1.name%>" required>
+           </div>
+           <div class="form-group">
+               <label for="Weapon1damage">Damage of Weapon One </label>
+               <input type="number" class="form-control" name="Weapon1damage" value="<%= player.Weapon1.damage%>" required>
+           </div>
+           <div class="form-group">
+               <label for="Weapon1pain">Pain of Weapon One </label>
+               <input type="text" class="form-control" name="Weapon1pain" value="<%= player.Weapon1.pain%>" required>
+           </div>
+           <div class="form-group">
+               <label for="details">Description</label>
+               <textarea class="form-control" name="Weapon1description" required><%= player.Weapon1.description%></textarea>
+           </div>
+
+           <button type="submit" class="btn btn-primary">Submit</button>
+   </div>
+   </form>
+
+</div>
+</body>
+</html>

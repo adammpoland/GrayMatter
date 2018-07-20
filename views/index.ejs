@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  <title>GrayMatter</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand a" href="#">GrayMatter</a>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link a" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item a">
+        <a class="nav-link" href="/Characters">Characters</a>
+      </li>
+      <li class="nav-item a">
+        <a class="nav-link a" href="/CharacterSheet">CharcaterSheet</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+<div class="container opacity">
+<form action="/CreateCharacter" method="POST" class="form-control" id="CharacterCreation">
+  <input class="form-control" type="text" placeholder="Player Name" name="PlayerName" require>
+  <br>
+  <input class="form-control" type="text" placeholder="Character Name" name="CharacterName" require>
+<br>
+  <select class="form-control" name="CharacterType" form="CharacterCreation" require>
+    <option selected>Choose Character Type</option>
+    <option value="NatHuman">Natural Human</option>
+    <option value="GenHuman">Geneticlly Modified Human</option>
+    <option value="MechHuman">Mech Human</option>
+    <option value="Cyborg">Cyborg</option>
+    <option value="AI">AI</option>
+  </select>
+<br>
+  <select class="form-control" name="Atribute1" form="CharacterCreation" require>
+    <option selected>Choose An Atribute</option>
+    <option value="Strength">Strength</option>
+    <option value="Endurance">Endurance</option>
+    <option value="Perception">Perception</option>
+    <option value="Dexterity">Dexterity</option>
+    <option value="Intelligence">Intelligence</option>
+    <option value="Willpower">Willpower</option>
+    <option value="Agility">Agility</option>
+    <option value="Luck">Luck</option>
+  </select>
+<br>
+  <select class="form-control" name="Atribute2" form="CharacterCreation" require>
+    <option selected>Choose Another Atribute</option>
+    <option value="Strength">Strength</option>
+    <option value="Endurance">Endurance</option>
+    <option value="Perception">Perception</option>
+    <option value="Dexterity">Dexterity</option>
+    <option value="Intelligence">Intelligence</option>
+    <option value="Willpower">Willpower</option>
+    <option value="Agility">Agility</option>
+    <option value="Luck">Luck</option>
+  </select>
+<br>
+<select class="form-control" name="Skill1" form="CharacterCreation" require>
+  <option selected>Choose A Skill</option>
+  <option value="Persuasion">Persuasion</option>
+  <option value="Sneak">Sneak</option>
+  <option value="PickPocket">PickPocket</option>
+  <option value="LightArmor">Light Armor</option>
+  <option value="HeavyArmor">Heavy Armor</option>
+  <option value="Gambling">Gambling</option>
+  <option value="Athletics">Althletics</option>
+  <option value="Melee">Melee</option>
+  <option value="Blade">Blade</option>
+  <option value="StandardGuns">Standard Guns</option>
+  <option value="SmartGuns">Smart Guns</option>
+  <option value="HeavyWeapons">Heavy Weapons</option>
+  <option value="Interrogate">Interrogate</option>
+  <option value="Mercantile">Mercantile</option>
+  <option value="Analize">Analize</option>
+  <option value="Hack">Hack</option>
+  <option value="Research">Research</option>
+  <option value="Art">Art</option>
+</select>
+<br>
+<select class="form-control" name="Skill2" form="CharacterCreation" require>
+  <option selected>Choose A Skill</option>
+  <option value="Persuasion">Persuasion</option>
+  <option value="Sneak">Sneak</option>
+  <option value="PickPocket">PickPocket</option>
+  <option value="LightArmor">Light Armor</option>
+  <option value="Gambling">Gambling</option>
+  <option value="Athletics">Althletics</option>
+  <option value="Melee">Melee</option>
+  <option value="Blade">Blade</option>
+  <option value="StandardGuns">Standard Guns</option>
+  <option value="SmartGuns">Smart Guns</option>
+  <option value="HeavyWeapons">Heavy Weapons</option>
+  <option value="Interrogate">Interrogate</option>
+  <option value="Mercantile">Mercantile</option>
+  <option value="Analize">Analize</option>
+  <option value="Hack">Hack</option>
+  <option value="Research">Research</option>
+  <option value="Art">Art</option>
+</select>
+<br>
+<select class="form-control" name="Skill3" form="CharacterCreation" require>
+  <option selected>Choose A Skill</option>
+  <option value="Persuasion">Persuasion</option>
+  <option value="Sneak">Sneak</option>
+  <option value="PickPocket">PickPocket</option>
+  <option value="LightArmor">Light Armor</option>
+  <option value="Gambling">Gambling</option>
+  <option value="Athletics">Althletics</option>
+  <option value="Melee">Melee</option>
+  <option value="Blade">Blade</option>
+  <option value="StandardGuns">Standard Guns</option>
+  <option value="SmartGuns">Smart Guns</option>
+  <option value="HeavyWeapons">Heavy Weapons</option>
+  <option value="Interrogate">Interrogate</option>
+  <option value="Mercantile">Mercantile</option>
+  <option value="Analize">Analize</option>
+  <option value="Hack">Hack</option>
+  <option value="Research">Research</option>
+  <option value="Art">Art</option>
+</select>
+<br>
+
+<input type="submit" class="btn btn-danger" value="Create Charcater">
+</form>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+body {
+
+     background: url("nebula.jpg");
+     /* Full height */
+       height: 100%;
+
+       /* Center and scale the image nicely */
+
+       background-repeat: repeat;
+       background-size: cover;
+     }
+.a {
+         color: white;
+         text-decoration-color: white;
+     }
+label {
+      color: white;
+      text-decoration-color: white;
+      }
+
+
+.opacity {
+     opacity: 0.8;
+     }
+.nopacity {
+     opacity: 1.0;
+     }

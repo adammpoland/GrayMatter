@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="/style.css">
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  <title>GrayMatter</title>
+</head>
+<body>
+<div class="container opacity">
+<div class="card card-inverse" style="background-color: #333; border-color: #333;">
+  <div class="card-block text-white">
+  <h1>Charcater's Name: <%= player.CharacterName %></h1>
+  <h2>HP: <%= player.HealthPoints %></h2>
+  <h2>Pain Tolerance: <%= player.PainTolerance %></h2>
+  <h2>Experience: <%= player.Experience %></h2>
+  </div>
+</div>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+          <ul class="list-group">
+      <li class="list-group-item"><h3>Atributes</h3></li>
+      <li class="list-group-item">Strength: <%= player.Strength %></li>
+      <li class="list-group-item">Endurance: <%= player.Endurance %></li>
+      <li class="list-group-item">Perception: <%= player.Perception %></li>
+      <li class="list-group-item">Dexterity: <%= player.Dexterity %></li>
+      <li class="list-group-item">Intelligence: <%= player.Intelligence %></li>
+      <li class="list-group-item">Willpower: <%= player.Willpower %></li>
+      <li class="list-group-item">Agility: <%= player.Agility %></li>
+      <li class="list-group-item">Luck: <%= player.Luck %></li>
+
+    </ul>
+    <br>
+    <ul class="list-group">
+
+<li class="list-group-item"><h3>Inventory</h3></li>
+<li class="list-group-item">Weapon: <%= player.Weapon1.name %></li>
+<li class="list-group-item">Weapon: <%= player.Weapon2.name %></li>
+<li class="list-group-item">Armor: <%= player.Armor.name %></li>
+<li class="list-group-item">Item: <%= player.Item1.name %></li>
+<li class="list-group-item">Item: <%= player.Item2.name %></li>
+<li class="list-group-item">Item: <%= player.Item3.name %></li>
+
+
+</ul>
+</div>
+<br>
+
+    <div class="col-sm">
+
+          <ul class="list-group">
+              <li class="list-group-item"><h3>Skills</h3></li>
+              <li class="list-group-item list-group-item-dark">Persuasion: <%= player.Persuasion %></li>
+              <li class="list-group-item">Sneak: <%= player.Sneak %></li>
+              <li class="list-group-item">PickPocket: <%= player.PickPocket %></li>
+              <li class="list-group-item">Light Armor: <%= player.LightArmor %></li>
+              <li class="list-group-item">Heavy Armor: <%= player.HeavyArmor %></li>
+              <li class="list-group-item">Gambling: <%= player.Gambling %></li>
+              <li class="list-group-item">Athletics: <%= player.Althletics %></li>
+              <li class="list-group-item">Melee: <%= player.Melee %></li>
+              <li class="list-group-item">Blade: <%= player.Blade %></li>
+              <li class="list-group-item">Standard Guns: <%= player.StandardGuns %></li>
+              <li class="list-group-item">Smart Guns: <%= player.SmartGuns %></li>
+              <li class="list-group-item">Heavy Weapons: <%= player.HeavyWeapons %></li>
+              <li class="list-group-item">Interrogate: <%= player.Interrogate %></li>
+              <li class="list-group-item">Mercantile: <%= player.Mercantile %></li>
+              <li class="list-group-item">Analize: <%= player.Analize %></li>
+              <li class="list-group-item">Hack: <%= player.Hack %></li>
+              <li class="list-group-item">Research: <%= player.Research %></li>
+              <li class="list-group-item">Art: <%= player.Art %></li>
+            </ul>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
